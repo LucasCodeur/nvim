@@ -9,5 +9,12 @@ return {
   require 'plugins.custom.auto_format',
   require 'plugins.custom.telescope',
   require 'plugins.custom.lsp',
-  require 'plugins.custom.which_key.lua',
+  require 'plugins.custom.which_key',
+  require 'plugins.custom.which_key',
+  require 'plugins.custom.autocompletion',
+  require 'plugins.custom.folke_tokyo',
+  require 'plugins.custom.folke_todo_comments',
+  require 'plugins.custom.treesitter',
+  require 'plugins.custom.mini',
+  require 'plugins.custom.vim_be_good',
 }
