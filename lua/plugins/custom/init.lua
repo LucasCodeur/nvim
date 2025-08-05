@@ -17,4 +17,6 @@ return {
   require 'plugins.custom.treesitter',
   require 'plugins.custom.mini',
   require 'plugins.custom.vim_be_good',
+  require 'plugins.custom.ia',
+  require 'plugins.custom.add_function_prints',
 }

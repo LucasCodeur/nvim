@@ -95,7 +95,7 @@ vim.o.guicursor = ''
 -- relative ligne en fonction de position cursor
 
 vim.o.nu = true
-vim.o.relativenumber = false
+vim.o.relativenumber = true
 
 vim.o.tabstop = 4
 vim.o.softtabstop = 0
