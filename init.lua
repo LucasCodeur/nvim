@@ -139,9 +139,7 @@ end)
 
 -- Enable break indent
 vim.opt.breakindent = true
-
--- Save undo history
-vim.opt.undofile = true
+-- Save undo history vim.opt.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
@@ -207,6 +205,30 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Dans votre init.lua, après la configuration des plugins
+-- Désactiver les touches fléchées dans tous les modes
+vim.keymap.set('', '<Up>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('', '<Down>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('', '<Left>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('', '<Right>', '<Nop>', { noremap = true, silent = true })
+
+-- Désactiver aussi en mode insertion
+vim.keymap.set('i', '<Up>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('i', '<Down>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('i', '<Left>', '<Nop>', { noremap = true, silent = true })
+vim.keymap.set('i', '<Right>', '<Nop>', { noremap = true, silent = true })
+
+vim.diagnostic.config {
+  virtual_text = {
+    source = 'always', -- Show error messages inline
+    prefix = '●', -- Custom prefix
+  },
+  signs = true, -- Show signs in gutter
+  underline = true, -- Underline errors
+  update_in_insert = false,
+  severity_sort = true,
+}
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
