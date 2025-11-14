@@ -110,7 +110,7 @@ vim.o.undofile = true
 vim.api.nvim_set_keymap('n', '<F5>', 'iprintf("");<Esc>', { noremap = true, silent = true })
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -218,6 +218,8 @@ vim.keymap.set('i', '<Up>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('i', '<Down>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('i', '<Left>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('i', '<Right>', '<Nop>', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('i', '<C-f>', '/*<CR>* @brief<CR>* @param<CR>* @param<CR>* @return<CR> */<Esc>O', { noremap = true, silent = true })
 
 vim.diagnostic.config {
   virtual_text = {
