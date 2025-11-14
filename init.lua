@@ -24,8 +24,7 @@ What is Kickstart?
 
   Kickstart.nvim is *not* a distribution.
 
-  Kickstart.nvim is a starting point for your own configuration.
-    The goal is that you can read every line of code, top-to-bottom, understand
+  Kickstart.nvim is a starting point for your own configuration. The goal is that you can read every line of code, top-to-bottom, understand
     what your configuration is doing, and modify it to suit your needs.
 
     Once you've done that, you can start exploring, configuring and tinkering to
@@ -219,7 +218,7 @@ vim.keymap.set('i', '<Down>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('i', '<Left>', '<Nop>', { noremap = true, silent = true })
 vim.keymap.set('i', '<Right>', '<Nop>', { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('i', '<C-f>', '/*<CR>* @brief<CR>* @param<CR>* @param<CR>* @return<CR> */<Esc>O', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-f>', '/**<CR>@brief<CR>@param<CR>@param<CR>@return<CR>/<Esc>O', { noremap = true, silent = true })
 
 vim.diagnostic.config {
   virtual_text = {
