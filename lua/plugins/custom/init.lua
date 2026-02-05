@@ -10,7 +10,6 @@ return {
   require 'plugins.custom.telescope',
   require 'plugins.custom.lsp',
   require 'plugins.custom.which_key',
-  require 'plugins.custom.which_key',
   require 'plugins.custom.autocompletion',
   require 'plugins.custom.folke_tokyo',
   require 'plugins.custom.folke_todo_comments',
