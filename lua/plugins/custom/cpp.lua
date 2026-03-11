@@ -1,6 +1,9 @@
-local ls = require 'luasnip'
-
-vim.keymap.set('i', '<C-t>', function()
-  -- expand 'testp' snippet directly
-  ls.snip_expand(ls.get_active_snippet() or ls.get_snippet { name = 'testp' })
-end, { buffer = true })
+return {
+  {
+    'L3MON4D3/LuaSnip',
+    config = function()
+      -- Charge tes snippets Lua custom
+      require('luasnip.loaders.from_lua').lazy_load { paths = '~/.config/nvim/lua/snippets' }
+    end,
+  },
+}
